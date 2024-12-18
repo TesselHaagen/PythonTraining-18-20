@@ -44,8 +44,19 @@ print(f"The vowel 'y' occurs {y_count} times.")
 print(f'Your text has a total of {len(text)} characters')
 print(f'Your text has a total of {a_count+e_count+o_count+u_count+i_count+y_count} vowels')
 
-# Manier 3, Datastructuren gebruiken
+# Manier 3, Datastructuren gebruiken voor manier 1
 counts = {v: text.count(v) for v in vowels}
 print('\n'.join([f'The vowel {v} occurs {c} times.' for v,c in counts.items()]))
 print(f'Your text has a total of {len(text)} characters')
 print(f'Your text has a total of {sum(list(counts.values()))} vowels')
+
+
+# Manier 4, Datastructuren gebruiken voor manier 2
+vowels = {'a': 0, 'e': 0,'i': 0,'o': 0,'u': 0,'y': 0}
+for letter in text:
+    if letter in vowels.keys():
+        vowels[letter] += 1
+    try:
+        vowels[letter] += 1
+    except KeyError:
+        continue
