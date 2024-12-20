@@ -33,7 +33,7 @@ class BankAccount:
 
 
 b = BankAccount('Jan', 1000000) # BankAccount.__init__(b, 'Jan', 1000000)
-b.deposit(50)
+b.deposit(50) # BankAccount.deposit(b, 50)
 b.deposit(50)
 b.deposit(50)
 print(b.info())
