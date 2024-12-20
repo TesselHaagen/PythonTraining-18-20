@@ -25,8 +25,8 @@ class Shape():
 
 
 class Circle(Shape):
-    def __init__(self, width):
-        super().__init__(self, width)
+    def __init__(self, *args):
+        super().__init__(self, *args)
         self.surface = self.calc_surface()
         self.perimeter = self.calc_perimeter()
     
